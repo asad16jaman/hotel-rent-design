@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHaven - Perfect Stay Anywhere</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap5.3.3.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.5.1/drift-basic.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house"></i> SaveLife
+            </a>
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <a href="#" class="btn-auth btn-signin">Sign In</a>
+                <a href="#" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <!-- Hotels Dropdown -->
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hotels
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">All Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Featured Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Luxury Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Budget Hotels</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Hotel Offers</a>
+                                </li>
+                            </ul>
+                        </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/hotel.html">Hotels</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 d-none d-lg-block">
+                    <a href="login.html" class="btn-auth btn-signin">Sign In</a>
+                    <a href="register.html" class="btn-auth btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hotels -->
+    <!-- Hotel Details -->
+    <section class="hotel-details-section nav-log-margin">
+        <div class="container">
+            <div class="row g-3">
+                <!-- Column 1: Hotel Images (5 Columns) -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="hotel-gallery">
+                        <div class="hotel-main-image">
+                            <img src="./image/hotel/h1.jpg" data-zoom="image/hotel/h1.jpg" id="mainHotelImage"
+                                alt="Hotel Image">
+                        </div>
+                        <div class="hotel-thumbnails">
+                            <img src="image/hotel/h1.jpg" data-large="image/hotel/h1.jpg" class="active"
+                                onclick="changeHotelImage(this)">
+
+                            <img src="image/hotel/h2.jpg" data-large="image/hotel/h2.jpg"
+                                onclick="changeHotelImage(this)">
+
+                            <img src="image/hotel/h3.jpg" data-large="image/hotel/h3.jpg"
+                                onclick="changeHotelImage(this)">
+
+                            <img src="image/hotel/h4.jpg" data-large="image/hotel/h4.jpg"
+                                onclick="changeHotelImage(this)">
+                            <img src="image/hotel/h5.jpg" data-large="image/hotel/h5.jpg"
+                                onclick="changeHotelImage(this)">
+                        </div>
+                        <!-- Fixed Zoom Popup -->
+                        <div id="zoomPaneContainer"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6">
+                    <div class="hotel-info">
+
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div>
+
+                                <h3 class="hotel-name">Ocean Paradise Hotel & Resort</h3>
+                                <span class="hotel-category">LUXURY HOTEL</span>
+                                <p class="hotel-location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Kolatoli, Cox's Bazar, Bangladesh
+                                </p>
+                                <div class="hotel-contact-info">
+                                    <p>
+                                        <i class="fa-solid fa-phone"></i>
+                                        Contact: <a href="tel:+8801700000000">+880 1700-000000</a>
+                                    </p>
+                                    <p>
+                                        <i class="fa-solid fa-calendar-check"></i>
+                                        Booking: <strong>09612-000000</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hotel-price">
+                            <strong>৳ 8,500 - 15,000</strong>
+                            <small> / Night</small>
+                        </div>
+
+                        <div class="hotel-meta">
+                            <p>
+                                <i class="fa-solid fa-bed"></i>
+                                Room Availability: <strong>Available</strong>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-hotel"></i>
+                                Property Type: <strong>5 Star Hotel</strong>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-wifi"></i>
+                                Free WiFi Available
+                            </p>
+                        </div>
+
+                        <form class="hotel-booking-form">
+
+                            <div class="hotel-option">
+                                <label>Room Type :</label>
+                                <select name="room_type" class="form-select">
+                                    <option value="">Select Room Type</option>
+                                    <option value="deluxe">Deluxe Room</option>
+                                    <option value="premium">Premium Room</option>
+                                    <option value="suite">Executive Suite</option>
+                                    <option value="family">Family Room</option>
+                                </select>
+                            </div>
+
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="hotel-option">
+                                        <label>Check In :</label>
+                                        <input type="date" name="check_in" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="hotel-option">
+                                        <label>Check Out :</label>
+                                        <input type="date" name="check_out" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Adults & Children -->
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <div class="hotel-option">
+                                        <label>Adults :</label>
+                                        <input type="number" name="adults" class="form-control" min="1" value="2">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="hotel-option">
+                                        <label>Children :</label>
+                                        <input type="number" name="children" class="form-control" min="0" value="0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Booking Buttons -->
+                            <div class="hotel-booking-buttons">
+                                <button type="submit" class="btn-book-now">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    BOOK NOW
+                                </button>
+                                <button type="button" class="btn-whatsapp">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+
+                <!-- Column 3: Service Features (2 Columns) -->
+                <div class="col-lg-2 col-md-12">
+                    <div class="hotel-service-list">
+                        <div class="hotel-service-card">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <h6>Instant Booking</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-service-card">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <h6>Free Cancellation</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-service-card">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <h6>Secure Booking</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-service-card">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <h6>24/7 Support</h6>
+                            </div>
+                        </div>
+                        <div class="hotel-service-card">
+                            <i class="fa-solid fa-check"></i>
+                            <div>
+                                <h6>Best Price</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="hotel-description">
+                        <!-- English Description -->
+                        <div class="description-item">
+                            <h3 class="description-heading">Description (English)</h3>
+                            <div class="bangla-font-size">
+                                <p>
+                                    Ocean Paradise Hotel & Resort is a beautiful
+                                    luxury hotel located in Cox's Bazar, Bangladesh.
+                                    Enjoy comfortable accommodation, modern facilities
+                                    and excellent hospitality with stunning views
+                                    of the sea.
+                                </p>
+                                <p>
+                                    The hotel offers spacious rooms, delicious food,
+                                    free WiFi, swimming pool and 24-hour room service.
+                                    It is an ideal destination for families, couples
+                                    and business travelers.
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="description-divider">
+                        <!-- Bangla Description -->
+                        <div class="description-item">
+                            <h3 class="description-heading">বিবরণ (বাংলা)</h3>
+                            <div class="bangla-font-size">
+                                <p>
+                                    ওশান প্যারাডাইস হোটেল অ্যান্ড রিসোর্ট বাংলাদেশের
+                                    কক্সবাজারে অবস্থিত একটি সুন্দর বিলাসবহুল হোটেল।
+                                    এখানে সমুদ্রের মনোরম দৃশ্যের পাশাপাশি আরামদায়ক
+                                    আবাসন এবং আধুনিক সুযোগ-সুবিধা উপভোগ করতে পারবেন।
+                                </p>
+                                <p>
+                                    হোটেলটিতে রয়েছে প্রশস্ত রুম, সুস্বাদু খাবার,
+                                    ফ্রি ওয়াইফাই, সুইমিং পুল এবং ২৪ ঘণ্টা রুম সার্ভিস।
+                                    পরিবার, দম্পতি এবং ভ্রমণপ্রেমীদের জন্য এটি
+                                    একটি আদর্শ স্থান।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotels -->
+            <section class="section-padding" id="hotels">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <h3 class="section-title section-heading">Related Hotels</h3>
+                        </div>
+                    </div>
+                    <div class="row g-3">
+
+                        <div class="col-lg-3 col-6">
+                            <div class="hotel-card">
+                                <a href="/hotelDetail.html" class="">
+                                    <div class="hotel-image">
+                                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700"
+                                            alt="Hotel">
+
+                                    </div>
+                                    <div class="hotel-body">
+                                        <h6>Atlantis The Royal</h6>
+                                        <p class="hotel-location">Dubai, UAE</p>
+                                        <button class="btn btn-primary-custom w-100 mt-3">
+                                            View Details
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="hotel-card">
+                                <a href="/hotelDetail.html">
+                                    <div class="hotel-image">
+                                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700"
+                                            alt="Hotel">
+                                    </div>
+                                    <div class="hotel-body">
+                                        <h6>Alila Villas Uluwatu</h6>
+                                        <p class="hotel-location">Bali, Indonesia</p>
+                                        <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                                class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="hotel-card">
+                                <a href="/hotelDetail.html">
+                                    <div class="hotel-image">
+                                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=700"
+                                            alt="Hotel">
+                                    </div>
+                                    <div class="hotel-body">
+                                        <h6>The Ritz London</h6>
+                                        <p class="hotel-location">London, UK</p>
+                                        <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                                class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <div class="hotel-card">
+                                <a href="/hotelDetail.html">
+                                    <div class="hotel-image">
+                                        <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=700"
+                                            alt="Hotel">
+                                    </div>
+                                    <div class="hotel-body">
+                                        <h6>Four Seasons</h6>
+                                        <p class="hotel-location">Paris, France</p>
+                                        <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                                class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="#" class="footer-brand">
+                        <i class="fa-solid fa-house"></i> SaveLife
+                    </a>
+                    <p class="footer-description">
+                        Discover amazing places to stay and enjoy
+                        unforgettable experiences. Find your perfect
+                        hotel with comfort and confidence.
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Top Destinations</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Dhaka</a></li>
+                        <li><a href="#">Cox's Bazar</a></li>
+                        <li><a href="#">Chattogram</a></li>
+                        <li><a href="#">Sylhet</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 custom_mt-0">
+                    <h6 class="footer-title mt-4 custom_mt-0 ">Subscribe to Our Newsletter</h6>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p> &copy; 2026 SaveLife. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Design & Developed By <a target="_blank" href="https://linktechbd.com/">Link-Up Technology
+                            Ltd.</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery3.7.js"></script>
+    <script src="./js/bootstrap5.3.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.5.1/Drift.min.js"></script>
+
+    <script>
+        let hotelDrift;
+        document.addEventListener('DOMContentLoaded', function () {
+            const mainImage = document.getElementById('mainHotelImage');
+            const zoomContainer = document.getElementById('zoomPaneContainer');
+            if (window.innerWidth >= 992) {
+                hotelDrift = new Drift(mainImage, {
+                    paneContainer: zoomContainer,
+                    inlinePane: 1,
+                    zoomFactor: 2.5,
+                    hoverBoundingBox: true,
+                    handleTouch: false
+                });
+            }
+        });
+
+        function changeHotelImage(element) {
+            const mainImage = document.getElementById('mainHotelImage');
+            mainImage.src = element.src;
+            const largeImage = element.getAttribute('data-large');
+            mainImage.setAttribute('data-zoom', largeImage);
+            if (hotelDrift) {
+                hotelDrift.setZoomImageURL(largeImage);
+            }
+            document.querySelectorAll('.hotel-thumbnails img').forEach(img => {
+                img.classList.remove('active');
+            });
+            element.classList.add('active');
+        }
+
+        const animationClasses = [
+            'service-animate-1',
+            'service-animate-2',
+            'service-animate-3',
+            'service-animate-4',
+            'service-animate-5',
+            'service-animate-6',
+            'service-animate-7',
+            'service-animate-8'
+        ];
+        const shuffledAnimations = [...animationClasses].sort(
+            () => Math.random() - 0.5
+        );
+        document.querySelectorAll('.hotel-service-card').forEach((card, index) => {
+            card.classList.add(
+                shuffledAnimations[index % shuffledAnimations.length]
+            );
+        });
+    </script>
+
+</body>
+
+</html>

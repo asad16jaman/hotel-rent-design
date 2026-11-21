@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHaven - Perfect Stay Anywhere</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap5.3.3.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/about.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house"></i> SaveLife
+            </a>
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <a href="#" class="btn-auth btn-signin">Sign In</a>
+                <a href="#" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <!-- Hotels Dropdown -->
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hotels
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">All Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Featured Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Luxury Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Budget Hotels</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Hotel Offers</a>
+                                </li>
+                            </ul>
+                        </li> -->
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">Hotels</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 d-none d-lg-block">
+                    <a href="login.html" class="btn-auth btn-signin">Sign In</a>
+                    <a href="register.html" class="btn-auth btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Page -->
+    <section class="about-page py-4 nav-log-margin">
+    
+        <div class="container">
+    
+            <!-- Breadcrumb -->
+            <!-- <div class="about-breadcrumb-card">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            About Us
+                        </li>
+                    </ol>
+                </nav>
+            </div> -->
+    
+            <!-- Page Heading -->
+            <div class="about-heading text-center">
+                <span class="about-subtitle">WHO WE ARE</span>
+                <h2>About SaveLife</h2>
+                <div class="about-title-divider"></div>
+            </div>
+    
+            <!-- About Introduction -->
+            <div class="row align-items-center g-4 about-intro">
+    
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <img src="image/about.jpg" alt="Beautiful Hotel">
+                        <div class="about-image-badge">
+                            <i class="fa-solid fa-hotel"></i>
+                            <div>
+                                <h5>Find Your Stay</h5>
+                                <small>Comfort starts here</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3>Your Journey Begins With the Perfect Stay</h3>
+                        <p>
+                            SaveLife is designed to make finding and booking hotels
+                            easier for everyone. Whether you are planning a family
+                            vacation, a business trip or a relaxing getaway, we help
+                            you discover suitable places to stay.
+                        </p>
+                        <p>
+                            Our goal is to provide a simple and convenient hotel
+                            booking experience where you can explore different
+                            properties, compare options and choose the right stay
+                            for your journey.
+                        </p>
+                        <a href="#" class="about-explore-btn">
+                            Explore Hotels
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+    
+           
+    
+            <!-- Why Choose Us -->
+            <div class="about-choose-section">
+                <div class="about-section-heading text-center">
+                    <span class="about-subtitle">WHY CHOOSE US</span>
+                    <h3>Why Travelers Choose SaveLife</h3>
+                </div>
+    
+                <div class="row g-4">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <h5>Easy Discovery</h5>
+                            <p>
+                                Explore different hotels and find a stay that
+                                matches your preferences.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </div>
+                            <h5>Easy Booking</h5>
+                            <p>
+                                Enjoy a simple and convenient process when
+                                planning your accommodation.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h5>Customer Support</h5>
+                            <p>
+                                Get assistance whenever you need help with
+                                your booking journey.
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="about-feature-card">
+                            <div class="about-feature-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h5>Reliable Experience</h5>
+                            <p>
+                                We aim to make your hotel discovery and
+                                booking experience trustworthy.
+                            </p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="#" class="footer-brand">
+                        <i class="fa-solid fa-house"></i> SaveLife
+                    </a>
+                    <p class="footer-description">
+                        Discover amazing places to stay and enjoy
+                        unforgettable experiences. Find your perfect
+                        hotel with comfort and confidence.
+                    </p>
+    
+                </div>
+    
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Top Destinations</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Dhaka</a></li>
+                        <li><a href="#">Cox's Bazar</a></li>
+                        <li><a href="#">Chattogram</a></li>
+                        <li><a href="#">Sylhet</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-lg-3 col-md-6 custom_mt-0">
+                    <h6 class="footer-title mt-4 custom_mt-0 ">Subscribe to Our Newsletter</h6>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p> &copy; 2026 SaveLife. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Design & Developed By <a target="_blank" href="https://linktechbd.com/">Link-Up Technology
+                            Ltd.</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery3.7.js"></script>
+    <script src="./js/bootstrap5.3.3.js"></script>
+
+</body>
+
+</html>

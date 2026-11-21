@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHaven - Perfect Stay Anywhere</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap5.3.3.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house"></i> SaveLife
+            </a>
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <a href="#" class="btn-auth btn-signin">Sign In</a>
+                <a href="#" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <!-- Hotels Dropdown -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Hotels
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">All Hotels</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Featured Hotels</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Luxury Hotels</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Budget Hotels</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Hotel Offers</a>
+                            </li>
+                        </ul>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">Hotels</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 d-none d-lg-block">
+                    <a href="login.html" class="btn-auth btn-signin">Sign In</a>
+                    <a href="register.html" class="btn-auth btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <section class="hero nav-log-margin">
+        <!-- Hero Slider -->
+        <div id="heroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+            </div>
+            <!-- Slides -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/45_1.jpg" class="hero-img" alt="Luxury Villa">
+                    <!-- <div class="hero-overlay"></div>
+                    <div class="container hero-container"> -->
+                    <!-- <div class="hero-content">
+                            <span class="fw-bold text-uppercase small">Find Your</span>
+                            <h1>Perfect Stay<br><span>Anywhere</span></h1>
+                            <p>Discover amazing hotel deals, resorts, apartments,
+                                and unique stays around the world.</p>
+                        </div> -->
+                    <!-- </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="image/45_2.jpg" class="hero-img" alt="Luxury Resort">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/45_3.jpg" class="hero-img" alt="Beautiful Destination">
+                </div>
+            </div>
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="booking-wrapper">
+            <div class="container">
+                <form class="booking-form">
+                    <div class="row align-items-center g-2">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="booking-field">
+                                <label>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    Select Area
+                                </label>
+                                <select name="area_id" id="area_id" required>
+                                    <option value="">Choose your area</option>
+                                    <option value="1">Dhaka</option>
+                                    <option value="2">Cox's Bazar</option>
+                                    <option value="3">Sylhet</option>
+                                    <option value="4">Chittagong</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="booking-field">
+                                <label>
+                                    <i class="fa-solid fa-hotel"></i>
+                                    Find Hotel & Resorts
+                                </label>
+                                <select name="hotel_type" id="hotel_type">
+                                    <option value="">All Hotels</option>
+                                    <option value="luxury">Luxury Hotels</option>
+                                    <option value="budget">Budget Hotels</option>
+                                    <option value="resort">Resorts</option>
+                                    <option value="apartment">Apartments</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3">
+                            <button type="submit" class="btn btn-warning w-100 fw-bold py-3">
+                                <i class="fa-solid fa-magnifying-glass me-2"></i>
+                                Search Hotels
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h6>Best Price<br>Guarantee</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-house"></i></div>
+                        <h6>Wide Range<br>of Properties</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h6>Secure<br>Booking</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h6>24/7 Customer<br>Support</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Destinations -->
+    <section class="section-padding section-bg" id="destinations">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div>
+                    <h3 class="section-title section-heading">Popular Destinations</h3>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d1.jpg" alt="Dubai">
+                            <div class="destination-info">
+                                <h6>Noakhali</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>1,250+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d1.jpg" alt="Bali">
+                            <div class="destination-info">
+                                <h6>Chattogram</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>980+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d2.jpg" alt="London">
+                            <div class="destination-info">
+                                <h6>Cox's Bazar</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>1,800+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d3.jpg" alt="Paris">
+                            <div class="destination-info">
+                                <h6>Rajshahi</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>1,400+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d1.jpg" alt="New York">
+                            <div class="destination-info">
+                                <h6>Rangpur</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>1,850+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="destination-card">
+                        <a href="">
+                            <img src="image/d2.jpg" alt="Bali">
+                            <div class="destination-info">
+                                <h6>Dhaka</h6>
+                                <div class="d-flex justify-content-between">
+                                    <small>980+ Hotels</small>
+                                    <span class="destination-icon">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels -->
+    <section class="section-padding" id="hotels">
+        <div class="container">
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div>
+                    <h3 class="section-title section-heading">Popular Hotel & Resorts</h3>
+                </div>
+            </div>
+
+            <div class="row g-3">
+
+                <div class="col-lg-3 col-6">
+                    <div class="hotel-card">
+                        <a href="/hotelDetail.html" class="">
+                            <div class="hotel-image">
+                                <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=700"
+                                    alt="Hotel">
+
+                            </div>
+                            <div class="hotel-body">
+                                <h6>Atlantis The Royal</h6>
+                                <p class="hotel-location">Dubai, UAE</p>
+                                <button class="btn btn-primary-custom w-100 mt-3">
+                                    View Details
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="hotel-card">
+                        <a href="/hotelDetail.html">
+                            <div class="hotel-image">
+                                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700"
+                                    alt="Hotel">
+                            </div>
+                            <div class="hotel-body">
+                                <h6>Alila Villas Uluwatu</h6>
+                                <p class="hotel-location">Bali, Indonesia</p>
+                                <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="hotel-card">
+                        <a href="/hotelDetail.html">
+                            <div class="hotel-image">
+                                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=700"
+                                    alt="Hotel">
+                            </div>
+                            <div class="hotel-body">
+                                <h6>The Ritz London</h6>
+                                <p class="hotel-location">London, UK</p>
+                                <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-6">
+                    <div class="hotel-card">
+                        <a href="/hotelDetail.html">
+                            <div class="hotel-image">
+                                <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=700"
+                                    alt="Hotel">
+                            </div>
+                            <div class="hotel-body">
+                                <h6>Four Seasons</h6>
+                                <p class="hotel-location">Paris, France</p>
+                                <button class="btn btn-primary-custom w-100 mt-3">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="#" class="footer-brand">
+                        <i class="fa-solid fa-house"></i> SaveLife
+                    </a>
+                    <p class="footer-description">
+                        Discover amazing places to stay and enjoy
+                        unforgettable experiences. Find your perfect
+                        hotel with comfort and confidence.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Top Destinations</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Dhaka</a></li>
+                        <li><a href="#">Cox's Bazar</a></li>
+                        <li><a href="#">Chattogram</a></li>
+                        <li><a href="#">Sylhet</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 custom_mt-0">
+                    <h6 class="footer-title mt-4 custom_mt-0 ">Subscribe to Our Newsletter</h6>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p> &copy; 2026 SaveLife. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Design & Developed By <a target="_blank" href="https://linktechbd.com/">Link-Up Technology
+                            Ltd.</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery3.7.js"></script>
+    <script src="./js/bootstrap5.3.3.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#area_id, #hotel_type').select2({
+                width: '100%',
+                placeholder: 'Select an option',
+                allowClear: true
+            });
+        });
+    </script>
+</body>
+
+</html>

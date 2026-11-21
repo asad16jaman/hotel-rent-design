@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayHaven - Perfect Stay Anywhere</title>
+    <!-- Bootstrap 5.3 -->
+    <link href="css/bootstrap5.3.3.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fa-solid fa-house"></i> SaveLife
+            </a>
+            <div class="d-flex align-items-center gap-2 d-lg-none">
+                <a href="#" class="btn-auth btn-signin">Sign In</a>
+                <a href="#" class="btn-auth btn-signup">Sign Up</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav mx-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <!-- Hotels Dropdown -->
+                    <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Hotels
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">All Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Featured Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Luxury Hotels</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Budget Hotels</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Hotel Offers</a>
+                                </li>
+                            </ul>
+                        </li> -->
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/hotel.html">Hotels</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 d-none d-lg-block">
+                    <a href="login.html" class="btn-auth btn-signin">Sign In</a>
+                    <a href="register.html" class="btn-auth btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Page -->
+    <div class="login-wrapper nav-log-margin">
+        <div class="login-form-area">
+
+            <div class="login-form-header">
+                <span class="login-welcome">WELCOME BACK</span>
+                <h3>Sign In</h3>
+            </div>
+
+            <form action="#" method="POST">
+
+                <div class="login-input-group">
+                    <label for="loginEmail">Email Address</label>
+                    <div class="login-input-box">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="loginEmail" name="email" placeholder="Enter your email address" required>
+                    </div>
+                </div>
+
+                <div class="login-input-group">
+                    <label for="loginPassword">Password</label>
+                    <div class="login-input-box">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="loginPassword" name="password" placeholder="Enter your password"
+                            required>
+                        <button type="button" class="password-toggle" onclick="toggleLoginPassword()">
+                            <i class="fa-regular fa-eye" id="passwordEye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                </div>
+                <button type="submit" class="login-submit-btn">
+                    Sign In
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+    
+                <div class="login-register">
+                    Don't have an account?
+                    <a href="register.html">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-12">
+                    <a href="#" class="footer-brand">
+                        <i class="fa-solid fa-house"></i> SaveLife
+                    </a>
+                    <p class="footer-description">
+                        Discover amazing places to stay and enjoy
+                        unforgettable experiences. Find your perfect
+                        hotel with comfort and confidence.
+                    </p>
+
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <h6 class="footer-title">Top Destinations</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Dhaka</a></li>
+                        <li><a href="#">Cox's Bazar</a></li>
+                        <li><a href="#">Chattogram</a></li>
+                        <li><a href="#">Sylhet</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 custom_mt-0">
+                    <h6 class="footer-title mt-4 custom_mt-0 ">Subscribe to Our Newsletter</h6>
+                    <form class="footer-newsletter">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="footer-social mt-3">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p> &copy; 2026 SaveLife. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <span>Design & Developed By <a target="_blank" href="https://linktechbd.com/">Link-Up Technology
+                            Ltd.</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/jquery3.7.js"></script>
+    <script src="./js/bootstrap5.3.3.js"></script>
+    <script>
+        function toggleLoginPassword() {
+            const password = document.getElementById('loginPassword');
+            const eye = document.getElementById('passwordEye');
+            if (password.type === 'password') {
+                password.type = 'text';
+                eye.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                password.type = 'password';
+                eye.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+    </script>
+</body>
+
+</html>
